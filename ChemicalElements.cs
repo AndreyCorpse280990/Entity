@@ -11,22 +11,22 @@ namespace Entity
     internal class ChemicalElements
     {
         [Column("id")]
-        public int id {  get; set; }
+        public int Id {  get; set; }
 
         [Column("FullName_f")]
-        public string fullName { get; set; }
+        public string FullName { get; set; } = string.Empty;
 
         [Column("Mass_f")]
-        public float? mass { get; set; }
+        public double? Mass { get; set; }
 
         [Column("NamedAfter_f")]
-        public string namedAfter {  get; set; }
+        public string? NamedAfter {  get; set; }
 
         public ChemicalElements() { }
 
         public override string ToString()
         {
-            return $"ID: {id}, Full Name: {fullName}, Mass: {mass?.ToString() ?? "N/A"}, Named After: {namedAfter}";
+            return $"ID: {Id}, Full Name: {FullName}, Mass: {Mass}, Named After: {NamedAfter}";
         }
     }
 }
